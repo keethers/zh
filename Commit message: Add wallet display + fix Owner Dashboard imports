@@ -1,18 +1,31 @@
+// components/OwnerDashboard.jsx
+
+import React from "react";
 import GamePayoutControls from "../components/GamePayoutControls";
 import CloneSimEngine from "../components/CloneSimEngine";
 import SharkTraderStatus from "../components/SharkTraderStatus";
 import TrustWalletSync from "../components/TrustWalletSync";
 
-const TRUST_WALLET_ADDRESS = "0x9743f6B009A0F701746..."; // ← keep your full real address
+// 🔐 Replace this with your actual wallet address or load via .env
+const TRUST_WALLET_ADDRESS = "0x9743f6B009A0F701746YOURADDRESSHERE";
+
 export default function OwnerDashboard() {
   return (
     <div style={{ padding: "2rem" }}>
       <h2>📊 Owner Dashboard</h2>
       <p>Welcome back, Commander.</p>
 
-      <div style={{ marginBottom: "1rem", background: "#000", padding: "1rem", color: "#0ff" }}>
-        <strong>🔗 Trust Wallet Connected:</strong><br />
-        {TRUST_WALLET_ADDRESS}
+      <div
+        style={{
+          marginBottom: "1rem",
+          background: "#000",
+          padding: "1rem",
+          color: "#0ff",
+          borderRadius: "0.5rem",
+          fontFamily: "monospace",
+        }}
+      >
+        <strong>Wallet:</strong> {TRUST_WALLET_ADDRESS}
       </div>
 
       <SharkTraderStatus />
