@@ -1,1 +1,16 @@
-{"name": "exoticaeco$ystem", "version": "1.0.0"}
+{
+  "name": "exoticaeco$ystem",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "remix dev",
+    "build": "remix build",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@remix-run/dev": "^2.6.2",
+    "@remix-run/react": "^2.6.2",
+    "@remix-run/serve": "^2.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
