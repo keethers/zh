@@ -1,3 +1,3 @@
-# ExoticaEco$ystem App
+# ecosystem 
 
 Deployment instructions and features summary.
