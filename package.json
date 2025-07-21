@@ -1,5 +1,5 @@
 {
-  "name": "exoticaeco$ystem",
+  "name": "exoticaecosystem",
   "version": "1.0.0",
   "scripts": {
     "dev": "remix dev",
