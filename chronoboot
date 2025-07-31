@@ -1,0 +1,20 @@
+// BootstrapChronoCore.js – Core initializer for ChronoSight + DarkPool integration
+import { chronoPredict } from './ChronoSight.js';
+import { darkPoolConvert } from './DarkPoolSim.js';
+
+export async function runPredictionAndCashout(target = 'lottery', wallet = '0xYOURWALLET', amount = 100) {
+  console.log("🧠 BootstrapChronoCore: Initializing temporal prediction mission...");
+
+  const prediction = await chronoPredict(target);
+  console.log("🔮 Prediction Result:", prediction);
+
+  const cashout = await darkPoolConvert(wallet, amount, 'USDT');
+  console.log("💸 Simulated Cashout Result:", cashout);
+
+  return {
+    system: 'ChronoStack v1',
+    prediction,
+    cashout,
+    runAt: new Date().toISOString()
+  };
+}
