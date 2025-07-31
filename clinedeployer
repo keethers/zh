@@ -1,0 +1,8 @@
+// Clone Deployer
+export function deployClones(count = 1000, task = () => {}) {
+  const results = [];
+  for (let i = 0; i < count; i++) {
+    results.push(task(i));
+  }
+  return results;
+}
