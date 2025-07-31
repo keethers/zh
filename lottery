@@ -1,0 +1,10 @@
+// LotteryTargeter.js – Target specific state and game formats
+export function getLotteryConfig(state = 'OR') {
+  const configs = {
+    OR: { name: 'Oregon Powerball', numbers: 6, max: 69 },
+    CA: { name: 'California SuperLotto', numbers: 5, max: 47 },
+    TX: { name: 'Texas Lotto', numbers: 6, max: 54 },
+  };
+
+  return configs[state] || configs.OR;
+}
