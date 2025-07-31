@@ -1,0 +1,26 @@
+// E$ Broker Engine – Exotica turns E$ into spendable assets
+import { getESBalance, sendToWallet, triggerPurchase } from './walletUtils';
+
+export async function convertEStoCash(userWallet, method = 'ETH', amount = 100) {
+  const balance = await getESBalance(userWallet);
+  if (balance < amount) {
+    return `❌ Insufficient E$: You have ${balance} E$, need ${amount}`;
+  }
+
+  const success = await sendToWallet(userWallet, method, amount);
+  return success
+    ? `✅ Exotica sent ${amount} E$ worth to ${method}. Transaction complete.`
+    : `❌ Conversion failed. Check wallet or payment method.`;
+}
+
+export async function spendES(userWallet, vendor = 'Amazon', amount = 25, item = 'Gift Card') {
+  const balance = await getESBalance(userWallet);
+  if (balance < amount) {
+    return `❌ Not enough E$. You have ${balance}.`;
+  }
+
+  const success = await triggerPurchase(vendor, item, amount);
+  return success
+    ? `🛒 Exotica purchased ${item} from ${vendor} using ${amount} E$.`
+    : `❌ Purchase failed. Try again or change vendor.`;
+}
