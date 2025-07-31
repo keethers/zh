@@ -1,0 +1,9 @@
+/systems/
+  ├── CloneStormLauncher.js     ← Deploys 10k–50k clones
+  ├── LotteryTargeter.js        ← Choose state/game type
+  ├── ResultsLogger.js          ← Save all predictions
+  ├── TemporalAnchor.js         ← Time drift adjuster
+  ├── CloneMap.js               ← Maps what each clone “sees”
+  ├── ChronoSight.js            ← (already dropped)
+  ├── DarkPoolSim.js            ← (already dropped)
+  ├── BootstrapChronoCore.js    ← (already dropped)
